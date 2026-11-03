@@ -199,6 +199,12 @@ section.s.alt{background:var(--band)}
 a.tag:hover{filter:brightness(.95);text-decoration:none}
 .levnote{margin:2px 0 22px;font-size:.82rem}
 
+/* Jauge (requêtes DNS SPF) */
+.gauge{display:flex;gap:3px;margin:10px 0 4px}
+.gauge i{flex:1;height:10px;border-radius:3px;background:var(--line-2);transition:background .3s}
+.gauge i.on{background:var(--ok)}.gauge.warn i.on{background:var(--warn)}.gauge.ko i.on{background:var(--ko)}
+.gaugelab{font:600 .8rem var(--sans);color:var(--mut);margin:0 0 6px}
+
 </style>
 </head>
 <body>
@@ -207,7 +213,7 @@ a.tag:hover{filter:brightness(.95);text-decoration:none}
 <main id="contenu" class="page"><div class="wrap"><div class="crumbs"><a href="index.html">Outils TPE</a> / Calculer son vrai taux horaire de dirigeant</div><div class="layout"><article class="prose"><h1>Calculer son vrai taux horaire de dirigeant</h1><p class="byline">Par Jarod Capella · Mis à jour le 3 novembre 2026 · 1 min de lecture</p>
 <p>La plupart des dirigeants connaissent leur chiffre d'affaires et ne connaissent pas ce que vaut leur heure. Le calcul est simple : ce que vous vous versez, divisé par les heures que vous travaillez vraiment, soirées et dimanches compris.</p>
 
-<h2 id="votre-calcul">Votre calcul</h2>
+<h2 id="votre-calcul" id="votre-calcul" id="votre-calcul">Votre calcul</h2>
 <label for="rev">Ce que vous vous versez par mois (€, net avant impôt)</label>
 <input id="rev" type="number" min="0" step="50" value="2800" inputmode="decimal">
 <label for="h">Heures réellement travaillées par semaine</label>
@@ -224,10 +230,10 @@ a.tag:hover{filter:brightness(.95);text-decoration:none}
 <p class="mut" id="t4"></p>
 </div>
 
-<h2 id="comment-lire-le-resultat">Comment lire le résultat</h2>
+<h2 id="comment-lire-le-resultat" id="comment-lire-le-resultat" id="comment-lire-le-resultat">Comment lire le résultat</h2>
 <p>Le premier chiffre est la moyenne honnête de votre travail. Le deuxième montre ce que vaudrait votre heure si vous ne faisiez que votre métier. L'écart entre les deux est le prix de l'administratif : c'est ce que vous payez chaque semaine pour des tâches souvent répétitives. La page <a href="automatiser.html">Quoi automatiser</a> aide à choisir lesquelles.</p>
 
-<h2 id="ce-que-le-calcul-ne-dit-pas">Ce que le calcul ne dit pas</h2>
+<h2 id="ce-que-le-calcul-ne-dit-pas" id="ce-que-le-calcul-ne-dit-pas" id="ce-que-le-calcul-ne-dit-pas">Ce que le calcul ne dit pas</h2>
 <p class="mut">Le revenu saisi est ce que vous vous versez, pas votre chiffre d'affaires. Le calcul ignore vos charges, vos cotisations et votre fiscalité : il sert à comparer vos heures, pas à fixer un prix. Pour fixer un tarif, il faut aussi couvrir vos charges et vos cotisations.</p>
 <footer class="mut"><p>Information générale, pas un conseil comptable ou fiscal. <a href="mentions.html">Mentions</a></p></footer></article><aside class="aside"><div class="card"><h4>Dans cette page</h4><ul class="toc"><li><a href="#votre-calcul">Votre calcul</a></li><li><a href="#comment-lire-le-resultat">Comment lire le résultat</a></li><li><a href="#ce-que-le-calcul-ne-dit-pas">Ce que le calcul ne dit pas</a></li></ul></div><div class="card related"><h4>À lire aussi</h4><a href="relance-facture.html">Relance et pénalités</a><a href="cout-reunion.html">Coût d&#x27;une réunion</a><a href="automatiser.html">Quoi automatiser</a><a href="index.html">← Retour à l’accueil</a></div></aside></div></div></main>
 <footer class="foot"><div class="wrap"><div class="g">
@@ -249,6 +255,18 @@ function calc(){
   document.getElementById("t4").textContent=heuresAn>0?"Sur l'année : "+Math.round(adm*w).toLocaleString("fr-FR")+" heures d'administratif, soit "+eur(adm*w*rev*12/heuresAn)+" de votre revenu.":"";
 }
 document.querySelectorAll("#rev,#h,#w,#adm").forEach(e=>e.addEventListener("input",calc));calc();
+</script>
+<script>
+(function(){var l=[].slice.call(document.querySelectorAll('.aside .toc a'));if(!l.length||!('IntersectionObserver' in window))return;
+var m={};l.forEach(function(a){m[a.getAttribute('href').slice(1)]=a});
+var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){l.forEach(function(a){a.classList.remove('on')});var a=m[e.target.id];if(a)a.classList.add('on')}})},{rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('.prose h2[id]').forEach(function(h){o.observe(h)})})();
+</script>
+<script>
+(function(){var l=[].slice.call(document.querySelectorAll('.aside .toc a'));if(!l.length||!('IntersectionObserver' in window))return;
+var m={};l.forEach(function(a){m[a.getAttribute('href').slice(1)]=a});
+var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){l.forEach(function(a){a.classList.remove('on')});var a=m[e.target.id];if(a)a.classList.add('on')}})},{rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('.prose h2[id]').forEach(function(h){o.observe(h)})})();
 </script><script>
 (function(){var l=[].slice.call(document.querySelectorAll('.aside .toc a'));if(!l.length||!('IntersectionObserver' in window))return;
 var m={};l.forEach(function(a){m[a.getAttribute('href').slice(1)]=a});
