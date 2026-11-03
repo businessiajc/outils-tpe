@@ -223,7 +223,7 @@ a.tag:hover{filter:brightness(.95);text-decoration:none}
 <p>Une décision qui revient toujours identique est une règle : écrivez-la une fois. Gardez pour vous ce qui n'arrive qu'une fois et qui engage la suite.</p>
 
 <h2 id="automatisation-ou-intelligence-artificielle">Automatisation ou intelligence artificielle ?</h2>
-<p>Si la tâche est toujours la même et sans jugement (un paiement arrive, un reçu part, une ligne s'ajoute au fichier), un enchaînement automatique simple suffit : il est quasi gratuit et il ne se trompe pas. L'intelligence artificielle sert quand il faut lire un texte libre, résumer, rédiger ou trier ce qui n'est pas calibré. Elle coûte à chaque usage et peut se tromper : on la fait relire avant l'envoi.</p>
+<p>Si la tâche est toujours la même et sans jugement (un paiement arrive, un reçu part, une ligne s'ajoute au fichier), un enchaînement automatique simple suffit : il coûte peu et refait la même chose à chaque fois. L'intelligence artificielle sert quand il faut lire un texte libre, résumer, rédiger ou trier ce qui n'est pas calibré. Elle coûte à chaque usage et peut se tromper : on la fait relire avant l'envoi.</p>
 
 <h2 id="calculer-le-gain">Calculer le gain</h2>
 <label for="hs">Heures passées par semaine sur la tâche</label>
@@ -261,8 +261,8 @@ function calc(){
   document.getElementById("g2").textContent=eur(val);
   document.getElementById("g3").textContent=eur(cout);
   document.getElementById("g4").textContent=eur(val-cout);
-  const m=v("hs")*4.33*v("pc")/100*v("th")-v("co");
-  document.getElementById("g5").textContent=m>0?"Après la mise en place, le gain est d'environ "+eur(m)+" par mois (4,33 semaines par mois).":"À ces valeurs, l'automatisation ne se rembourse pas : cherchez une tâche plus longue ou un outil moins cher.";
+  const m=v("hs")*46/12*v("pc")/100*v("th")-v("co");
+  document.getElementById("g5").textContent=m>0?"Après la mise en place, le gain est d'environ "+eur(m)+" par mois (46 semaines réparties sur 12 mois).":"À ces valeurs, l'automatisation ne se rembourse pas : cherchez une tâche plus longue ou un outil moins cher.";
 }
 document.querySelectorAll("#hs,#th,#co,#mi,#pc").forEach(e=>e.addEventListener("input",calc));calc();
 </script><script>

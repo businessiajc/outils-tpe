@@ -266,7 +266,7 @@ function calc(){
   set("r1",c>0?eur(pv):"–");set("r2",c>0?eur(pv*(1+t)):"–");set("r3",c>0?eur(pv-c):"–");
   set("r4",c>0?pc((pv-c)/c*100):"–");set("r5",c>0?(pv/c).toLocaleString("fr-FR",{minimumFractionDigits:2,maximumFractionDigits:2}):"–");
   const p=v("pv"),c2=v("cout2");
-  set("s1",p>0?eur(p-c2):"–");set("s2",p>0?pc((p-c2)/p*100):"–");set("s3",c2>0?pc((p-c2)/c2*100):"–");
+  set("s1",p>0?eur(p-c2):"–");set("s2",p>0?pc((p-c2)/p*100):"–");set("s3",p>0&&c2>0?pc((p-c2)/c2*100):"–");
   set("s4",p>0&&p<c2?"Vous vendez à perte : chaque vente coûte "+eur(c2-p)+".":"");
 }
 document.querySelectorAll("#cout,#marque,#tva,#pv,#cout2").forEach(e=>e.addEventListener("input",calc));calc();

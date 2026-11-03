@@ -227,7 +227,6 @@ a.tag:hover{filter:brightness(.95);text-decoration:none}
 <div class="res" aria-live="polite">
 <p>Votre taux horaire sur toutes vos heures : <strong id="t1">–</strong></p>
 <p>Votre taux horaire sur le seul temps de métier (hors administratif) : <strong id="t2">–</strong></p>
-<p>Ce que vous coûte chaque heure d'administratif : <strong id="t3">–</strong></p>
 <p class="mut" id="t4"></p>
 </div>
 
@@ -252,7 +251,6 @@ function calc(){
   const heuresAn=h*w, metier=(h-adm)*w;
   document.getElementById("t1").textContent=heuresAn>0?eur(rev*12/heuresAn):"–";
   document.getElementById("t2").textContent=metier>0?eur(rev*12/metier):"–";
-  document.getElementById("t3").textContent=heuresAn>0?eur(rev*12/heuresAn):"–";
   document.getElementById("t4").textContent=heuresAn>0?"Sur l'année : "+Math.round(adm*w).toLocaleString("fr-FR")+" heures d'administratif, soit "+eur(adm*w*rev*12/heuresAn)+" de votre revenu.":"";
 }
 document.querySelectorAll("#rev,#h,#w,#adm").forEach(e=>e.addEventListener("input",calc));calc();
