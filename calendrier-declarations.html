@@ -260,7 +260,7 @@ function liste(){
   if(p==="m"){
     for(i=0;i<40&&out.length<4;i++){
       d=fin(base.getFullYear(),base.getMonth()+i);
-      if(d>=base){var r=new Date(d.getFullYear(),d.getMonth()-1,1);out.push("Revenus du mois de "+MOIS[r.getMonth()]+" "+r.getFullYear()+" : avant le "+fmt(d));}
+      if(d>=base){var r=new Date(d.getFullYear(),d.getMonth()-1,1);out.push("Revenus "+(/^[aeiouéô]/.test(MOIS[r.getMonth()])?"d'":"de ")+MOIS[r.getMonth()]+" "+r.getFullYear()+" : avant le "+fmt(d));}
     }
   } else {
     var ech=[];
