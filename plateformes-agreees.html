@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liste des plateformes agréées de facturation électronique (PA) : recherche et export — Outils TPE</title>
+<meta name="description" content="Liste officielle des plateformes agréées de facturation électronique : 158 immatriculées, recherche par nom, ville ou pays, export CSV. Source impots.gouv.fr, novembre 2026.">
+<link rel="canonical" href="https://businessiajc.github.io/outils-tpe/plateformes-agreees.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 28 28' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='64' height='64' rx='7' fill='%230b5d56'/%3E%3Crect x='7' y='6' width='14' height='16' rx='2' fill='none' stroke='%23fff' stroke-width='1.6'/%3E%3Crect x='9.5' y='8.5' width='9' height='3.5' rx='.8' fill='%23fff'/%3E%3Cg fill='%23fff'%3E%3Ccircle cx='10.6' cy='15.4' r='1'/%3E%3Ccircle cx='14' cy='15.4' r='1'/%3E%3Ccircle cx='17.4' cy='15.4' r='1'/%3E%3Ccircle cx='10.6' cy='18.6' r='1'/%3E%3Ccircle cx='14' cy='18.6' r='1'/%3E%3Ccircle cx='17.4' cy='18.6' r='1'/%3E%3C/g%3E%3C/svg%3E">
+<meta name="theme-color" content="#0b5d56">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Outils TPE">
+<meta property="og:title" content="Liste des plateformes agréées de facturation électronique (PA) : recherche et export">
+<meta property="og:description" content="Liste officielle des plateformes agréées de facturation électronique : 158 immatriculées, recherche par nom, ville ou pays, export CSV. Source impots.gouv.fr, novembre 2026.">
+<meta property="og:url" content="https://businessiajc.github.io/outils-tpe/plateformes-agreees.html">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Plateformes agréées de facturation électronique : la liste officielle, filtrable","description":"Liste officielle des plateformes agréées de facturation électronique : 158 immatriculées, recherche par nom, ville ou pays, export CSV. Source impots.gouv.fr, novembre 2026.","inLanguage":"fr","dateModified":"2026-11-07","author":{"@type":"Person","name":"Jarod Capella"},"mainEntityOfPage":"https://businessiajc.github.io/outils-tpe/plateformes-agreees.html"}</script>
+<style>
+/* Système de design commun — éditorial, sobre, lisible. Une seule couleur d'accent. */
+:root{
+  --bg:#f8f8f5;--surface:#fff;--surface-2:#f1f2ee;--ink:#14202b;--ink-2:#3b4852;--mut:#66727c;--line:#dde1e3;--line-2:#c9cfd3;
+  --ac:#0b5d56;--ac-ink:#fff;--ac-soft:#e3f0ee;--c2:#2552c7;--c2-soft:#e6ecfb;--c3:#b4580b;--c3-soft:#fbeadb;--c4:#7a2f8f;--c4-soft:#f3e7f7;--hero:#dcefe9;--band:#eef3f1;
+  --ok:#17744a;--ok-bg:#e6f3ec;--warn:#8f5b00;--warn-bg:#fbf0db;--ko:#b0271c;--ko-bg:#fbe7e4;
+  --shadow:0 1px 2px rgba(20,32,43,.06),0 8px 24px -12px rgba(20,32,43,.14);
+  --serif:"Iowan Old Style","Palatino Linotype",Charter,"Book Antiqua",Georgia,serif;
+  --sans:Inter,"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"Cascadia Code","SF Mono",Consolas,"Liberation Mono",monospace;
+  color-scheme:light;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --bg:#0e1418;--surface:#141c22;--surface-2:#1a242b;--ink:#e8edf0;--ink-2:#c3ccd2;--mut:#93a0a9;--line:#26333c;--line-2:#34444f;
+  --ac:#5cc1b4;--ac-ink:#08201d;--ac-soft:#16302d;--c2:#8aa8ff;--c2-soft:#1a2440;--c3:#f0a35c;--c3-soft:#33230f;--c4:#d39be6;--c4-soft:#2b1a33;--hero:#10302f;--band:#121d22;
+  --ok:#5ccb92;--ok-bg:#12281d;--warn:#e7b04c;--warn-bg:#2b2210;--ko:#ff8a7e;--ko-bg:#2f1714;
+  --shadow:0 1px 2px rgba(0,0,0,.4);color-scheme:dark}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{overflow-wrap:anywhere;color:var(--ac);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ac);color:var(--ac-ink);padding:8px 12px;border-radius:6px;z-index:10}
+.skip:focus{left:8px}
+
+/* En-tête */
+.top{background:var(--surface);border-bottom:1px solid var(--line);border-top:4px solid var(--ac);position:sticky;top:0;z-index:5}
+.top .wrap{display:flex;align-items:center;gap:20px;min-height:58px;padding-top:6px;padding-bottom:6px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em;color:var(--ink);text-decoration:none;font-size:1.02rem}
+.brand svg{flex:none}
+.brand small{font-weight:500;color:var(--mut);margin-left:2px}
+.nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+.nav a{white-space:nowrap;color:var(--ink-2);text-decoration:none;padding:7px 11px;border-radius:7px;font-size:.93rem;font-weight:500}
+.nav a:hover{background:var(--surface-2);color:var(--ink)}
+.nav a[aria-current=page]{background:var(--ac-soft);color:var(--ac)}
+@media(max-width:1020px){.top .wrap{flex-wrap:wrap;gap:2px 20px;padding-top:10px;padding-bottom:8px}.nav{margin-left:0;width:100%}}
+@media(max-width:720px){.top .wrap{gap:4px}.brand small{display:none}.nav{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}.nav::-webkit-scrollbar{display:none}.nav a{flex:none}}
+
+/* Bandeau d'accueil */
+.hero{padding:56px 0 44px;border-bottom:1px solid var(--line);background:var(--hero);position:relative}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:4px;background:linear-gradient(90deg,var(--ac) 0 34%,var(--c2) 34% 67%,var(--c3) 67% 100%)}
+.hero .wrap{max-width:860px}
+.kicker{display:inline-flex;align-items:center;gap:8px;font:600 .78rem/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--ac)}
+.kicker::before{content:"";width:22px;height:2px;background:var(--ac)}
+.hero h1{font:700 clamp(1.9rem,4.4vw,2.9rem)/1.12 var(--serif);letter-spacing:-.02em;margin:14px 0 14px;max-width:18em}
+.hero p.lead{font-size:1.1rem;color:var(--ink-2);max-width:42em;margin:0 0 26px}
+.meta-line{display:flex;flex-wrap:wrap;gap:6px 22px;color:var(--mut);font-size:.86rem;margin-top:18px}
+.meta-line span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--ac);margin-right:8px;vertical-align:middle}
+
+/* Champ de saisie */
+.search{display:flex;gap:0;background:var(--surface);border:1.5px solid var(--line-2);border-radius:12px;box-shadow:var(--shadow);overflow:hidden;max-width:640px}
+.search:focus-within{border-color:var(--ac);box-shadow:0 0 0 4px var(--ac-soft)}
+.search input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:500 1.08rem/1 var(--sans);padding:18px 18px;outline:0}
+.search input::placeholder{color:var(--mut);font-weight:400}
+.btn{border:0;background:var(--ac);color:var(--ac-ink);font:600 .98rem var(--sans);padding:0 26px;cursor:pointer;white-space:nowrap}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--ac);border:1px solid var(--line-2);border-radius:8px;padding:8px 14px;font-size:.85rem}
+.btn.ghost:hover{background:var(--ac-soft);filter:none}
+a.btn{display:inline-block;padding:12px 22px;border-radius:8px;text-decoration:none;white-space:normal}
+.try{margin-top:12px;color:var(--mut);font-size:.88rem}
+.try button{background:none;border:0;color:var(--ac);font:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:0 2px}
+
+/* Résultats */
+#resultat{padding:0}
+.rhead{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;margin:36px 0 18px}
+.rhead h2{font:700 1.5rem/1.2 var(--serif);margin:0}
+.rhead h2 span{font-family:var(--mono);font-weight:600;font-size:.9em;background:var(--surface-2);padding:2px 8px;border-radius:6px}
+.score{display:flex;align-items:center;gap:14px}
+.score b{font:700 1.05rem var(--sans)}
+.bar{display:flex;gap:5px}.bar i{display:block;width:38px;height:8px;border-radius:4px;background:var(--line-2)}
+.bar i.ok{background:var(--ok)}.bar i.warn{background:var(--warn)}.bar i.ko{background:var(--ko)}
+.checks{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:760px){.checks{grid-template-columns:1fr}}
+.check{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--line-2);border-radius:10px;padding:18px 20px}
+.check.ok{border-left-color:var(--ok)}.check.warn{border-left-color:var(--warn)}.check.ko{border-left-color:var(--ko)}
+.check header{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
+.check h3{margin:0;font:700 1.02rem var(--sans);letter-spacing:-.005em}
+.check h3 small{display:block;color:var(--mut);font-weight:500;font-size:.8rem;margin-top:1px}
+.chip{font:700 .72rem/1 var(--sans);letter-spacing:.05em;text-transform:uppercase;padding:5px 9px;border-radius:999px;white-space:nowrap}
+.chip.ok{background:var(--ok-bg);color:var(--ok)}.chip.warn{background:var(--warn-bg);color:var(--warn)}.chip.ko{background:var(--ko-bg);color:var(--ko)}
+.check p{margin:6px 0;color:var(--ink-2);font-size:.95rem}
+.rec{position:relative;margin-top:10px;background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:10px 74px 10px 12px;font:.8rem/1.5 var(--mono);color:var(--ink);word-break:break-all;white-space:pre-wrap}
+.rec button{position:absolute;top:7px;right:7px;font:600 .72rem var(--sans);border:1px solid var(--line-2);background:var(--surface);color:var(--ink-2);border-radius:6px;padding:4px 9px;cursor:pointer}
+.rec button:hover{color:var(--ac);border-color:var(--ac)}
+.fix{margin-top:10px;font-size:.9rem;color:var(--ink-2);border-top:1px dashed var(--line-2);padding-top:9px}
+.fix b{color:var(--ink)}
+.loading{display:flex;align-items:center;gap:12px;color:var(--mut);padding:28px 0}
+.spin{width:18px;height:18px;border:2.5px solid var(--line-2);border-top-color:var(--ac);border-radius:50%;animation:s .8s linear infinite}
+@keyframes s{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.spin{animation:none}}
+
+/* Sections */
+section.s{padding:56px 0;border-bottom:1px solid var(--line)}
+section.s.alt{background:var(--band)}
+.s h2::before{content:"";display:block;width:44px;height:4px;border-radius:2px;background:var(--ac);margin-bottom:12px}
+.s h2{font:700 clamp(1.45rem,3vw,1.9rem)/1.2 var(--serif);letter-spacing:-.015em;margin:0 0 8px}
+.s .sub{color:var(--ink-2);max-width:44em;margin:0 0 28px}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden}
+.cols3>div{padding:24px;border-right:1px solid var(--line)}.cols3>div:last-child{border-right:0}
+@media(max-width:820px){.cols3{grid-template-columns:1fr}.cols3>div{border-right:0;border-bottom:1px solid var(--line)}.cols3>div:last-child{border-bottom:0}}
+.cols3 h3{margin:0 0 4px;font:700 1.1rem var(--sans)}.cols3 h3 span{font:600 .75rem var(--mono);color:var(--ac);display:block;letter-spacing:.04em;margin-bottom:6px}
+.cols3 p{margin:0;color:var(--ink-2);font-size:.95rem}
+.gen{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media(max-width:820px){.gen{grid-template-columns:1fr}}
+.panel{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:22px}
+.s.alt .panel{background:var(--bg)}
+.panel h3{margin:0 0 2px;font:700 1.05rem var(--sans)}.panel .sub2{color:var(--mut);font-size:.85rem;margin:0 0 14px}
+.panel label{display:block;font-size:.9rem;margin:8px 0}
+.panel label.chk{display:flex;gap:9px;align-items:center}
+.panel input[type=text],.panel select{width:100%;margin-top:4px;padding:10px 12px;border:1px solid var(--line-2);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit}
+.panel input[type=checkbox]{accent-color:var(--ac);width:17px;height:17px}
+.guides{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:820px){.guides{grid-template-columns:1fr}}
+.guide{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
+.guide:hover{border-color:var(--ac);transform:translateY(-2px)}
+.guide span{font:600 .74rem var(--sans);letter-spacing:.07em;text-transform:uppercase;color:var(--ac)}
+.guide h3{margin:6px 0 6px;font:700 1.08rem/1.3 var(--serif)}.guide p{margin:0;color:var(--ink-2);font-size:.92rem}
+.method{max-width:760px;color:var(--ink-2)}.method h3{font:700 1rem var(--sans);color:var(--ink);margin:22px 0 4px}.method p{margin:0 0 6px}
+
+/* Pages article */
+.page{padding:36px 0 72px}
+.crumbs{font-size:.85rem;color:var(--mut);margin-bottom:18px}.crumbs a{color:var(--mut)}.crumbs a:hover{color:var(--ac)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:56px;align-items:start}
+@media(max-width:940px){.layout{grid-template-columns:minmax(0,1fr)}.aside{order:-1}}
+.prose{max-width:720px}
+.prose h1{font:700 clamp(1.8rem,4vw,2.5rem)/1.15 var(--serif);letter-spacing:-.02em;margin:0 0 12px}
+.prose .byline{color:var(--mut);font-size:.86rem;margin:0 0 26px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.prose h2{font:700 1.45rem/1.25 var(--serif);letter-spacing:-.01em;margin:2.2em 0 .5em;scroll-margin-top:80px}
+.prose h3{font:700 1.08rem var(--sans);margin:1.6em 0 .3em;scroll-margin-top:80px}
+.prose p,.prose li{color:var(--ink-2)}.prose strong{color:var(--ink)}
+.prose ul,.prose ol{padding-left:1.25em}.prose li{margin:.3em 0}
+.prose code{font:.86em var(--mono);background:var(--surface-2);border:1px solid var(--line);padding:1px 6px;border-radius:5px;color:var(--ink);word-break:break-word}
+.prose pre{background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow:auto}.prose pre code{background:none;border:0;padding:0}
+.prose table{width:100%;border-collapse:collapse;margin:1.2em 0;font-size:.93rem;display:block;overflow-x:auto}
+.prose th{background:var(--surface-2);text-align:left;font-weight:700;white-space:nowrap}
+.prose th,.prose td{border-bottom:1px solid var(--line);padding:9px 12px;vertical-align:top}
+.prose tr:hover td{background:color-mix(in srgb,var(--surface-2) 55%,transparent)}
+.box,.item,.res{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--ac);border-radius:10px;padding:14px 18px;margin:1.3em 0}
+.box>:first-child,.res>:first-child,.item>:first-child{margin-top:0}.box>:last-child,.res>:last-child,.item>:last-child{margin-bottom:0}
+.mut{color:var(--mut);font-size:.9rem}
+.prose label{display:block;margin:16px 0 5px;font-weight:600;font-size:.92rem;color:var(--ink)}
+.prose input,.prose select{width:100%;padding:12px 14px;border:1px solid var(--line-2);border-radius:9px;font:inherit;background:var(--surface);color:var(--ink)}
+.prose input:focus,.prose select:focus{outline:2px solid var(--ac);border-color:var(--ac)}
+.aside{position:sticky;top:78px;font-size:.9rem}
+.aside .card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px}
+.aside h4{margin:0 0 8px;font:700 .72rem var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+.aside ul{list-style:none;margin:0;padding:0}.aside li{margin:0}
+.aside li a{display:block;padding:5px 0;color:var(--ink-2);text-decoration:none;border-left:2px solid transparent;padding-left:10px;margin-left:-10px}
+.aside li a:hover,.aside li a.on{color:var(--ac);border-left-color:var(--ac)}
+.related a{display:block;padding:6px 0;color:var(--ink-2);text-decoration:none}.related a:hover{color:var(--ac)}
+@media print{.top,.aside,.foot,.skip{display:none}.layout{display:block}body{background:#fff;color:#000}.prose{max-width:none}}
+
+/* Pied de page */
+.foot{background:var(--surface);border-top:1px solid var(--line);padding:36px 0 44px;color:var(--mut);font-size:.88rem}
+.foot .g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+@media(max-width:760px){.foot .g{grid-template-columns:1fr;gap:20px}}
+.foot h4{margin:0 0 8px;font:700 .72rem var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.foot a{color:var(--ink-2)}.foot p{margin:0 0 6px}.foot ul{list-style:none;padding:0;margin:0}.foot li{margin:4px 0}
+.foot .legal{margin-top:26px;padding-top:16px;border-top:1px solid var(--line)}
+
+/* Couleurs par rubrique */
+.cols3>div{border-top:4px solid var(--ac)}.cols3>div.c2{border-top-color:var(--c2)}.cols3>div.c3{border-top-color:var(--c3)}
+.cols3>div.c1 h3 span{color:var(--ac)}.cols3>div.c2 h3 span{color:var(--c2)}.cols3>div.c3 h3 span{color:var(--c3)}
+.cols3>div.c1{background:var(--ac-soft)}.cols3>div.c2{background:var(--c2-soft)}.cols3>div.c3{background:var(--c3-soft)}
+.guide{border-top:4px solid var(--ac)}.guide.k-guide{border-top-color:var(--c2)}.guide.k-guide span{color:var(--c2)}
+.guide.k-calc{border-top-color:var(--c3)}.guide.k-calc span{color:var(--c3)}
+.guide:hover{border-color:var(--line-2);box-shadow:var(--shadow)}
+.guide.k-guide:hover{border-top-color:var(--c2)}.guide.k-calc:hover{border-top-color:var(--c3)}
+.kicker{color:var(--ac)}.btn{background:var(--ac)}
+.meta-line span:nth-child(2)::before{background:var(--c2)}.meta-line span:nth-child(3)::before{background:var(--c3)}
+.panel{border-top:4px solid var(--c2)}.gen .panel:nth-child(2){border-top-color:var(--c4)}
+.prose h2{border-left:4px solid var(--ac);padding-left:12px}
+.prose h2:nth-of-type(3n+2){border-left-color:var(--c2)}.prose h2:nth-of-type(3n+3){border-left-color:var(--c3)}
+.prose th{background:var(--ac-soft);color:var(--ink)}
+.aside .card:first-child{border-top:4px solid var(--c2)}.aside .card.related{border-top:4px solid var(--c3)}
+.foot{border-top:4px solid var(--ac)}
+
+/* Niveaux d'études */
+.levels{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 4px}
+.tag{display:inline-block;font:700 .72rem/1 var(--sans);letter-spacing:.03em;padding:6px 10px;border-radius:999px;text-decoration:none;background:var(--ac-soft);color:var(--ac)}
+.tag.t2{background:var(--ac-soft);color:var(--ac)}.tag.t3{background:var(--c2-soft);color:var(--c2)}.tag.t5{background:var(--c3-soft);color:var(--c3)}
+a.tag:hover{filter:brightness(.95);text-decoration:none}
+.levnote{margin:2px 0 22px;font-size:.82rem}
+
+/* Jauge (requêtes DNS SPF) */
+.gauge{display:flex;gap:3px;margin:10px 0 4px}
+.gauge i{flex:1;height:10px;border-radius:3px;background:var(--line-2);transition:background .3s}
+.gauge i.on{background:var(--ok)}.gauge.warn i.on{background:var(--warn)}.gauge.ko i.on{background:var(--ko)}
+.gaugelab{font:600 .8rem var(--sans);color:var(--mut);margin:0 0 6px}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="top"><div class="wrap"><a class="brand" href="index.html"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#0b5d56"/><rect x="7" y="6" width="14" height="16" rx="2" fill="none" stroke="#fff" stroke-width="1.6"/><rect x="9.5" y="8.5" width="9" height="3.5" rx=".8" fill="#fff"/><g fill="#fff"><circle cx="10.6" cy="15.4" r="1"/><circle cx="14" cy="15.4" r="1"/><circle cx="17.4" cy="15.4" r="1"/><circle cx="10.6" cy="18.6" r="1"/><circle cx="14" cy="18.6" r="1"/><circle cx="17.4" cy="18.6" r="1"/></g></svg><span>Outils TPE</span><small>par Jarod Capella</small></a><nav class="nav" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="taux-horaire.html">Taux horaire</a><a href="relance-facture.html">Relance et pénalités</a><a href="cout-reunion.html">Coût d&#x27;une réunion</a><a href="mentions-facture.html">Mentions de facture</a><a href="prix-marge.html">Prix et marge</a><a href="devis-batiment.html">Devis du bâtiment</a><a href="plafonds.html">Plafonds et TVA</a><a href="cookies-audience.html">Cookies et statistiques</a><a href="mentions-site.html">Mentions du site</a><a href="facture-electronique.html">Facture électronique</a><a href="plateformes-agreees.html" aria-current="page">Plateformes agréées</a><a href="registre-rgpd.html">Registre RGPD</a><a href="cgv.html">CGV</a><a href="calendrier-declarations.html">Déclarations Urssaf</a><a href="cfe.html">CFE</a><a href="versement-liberatoire.html">Versement libératoire</a><a href="livre-recettes.html">Livre des recettes</a><a href="frais-kilometriques.html">Frais kilométriques</a><a href="net-micro.html">Ce qu&#x27;il reste</a><a href="classeur-micro.html">Classeur Excel</a><a href="automatiser.html">Quoi automatiser</a></nav></div></header>
+<main id="contenu" class="page"><div class="wrap"><div class="crumbs"><a href="index.html">Outils TPE</a> / Plateformes agréées de facturation électronique : la liste officielle, filtrable</div><div class="layout"><article class="prose"><h1>Plateformes agréées de facturation électronique : la liste officielle, filtrable</h1><p class="byline">Par Jarod Capella · Mis à jour le 7 novembre 2026 · 2 min de lecture</p>
+<p>Toutes les entreprises doivent pouvoir recevoir des factures électroniques depuis le 1er septembre 2026, par l'intermédiaire d'une plateforme agréée (PA). Les micro-entrepreneurs doivent en émettre à partir du 1er septembre 2027 (voir <a href="facture-electronique.html">notre page sur les dates</a>). Cette page reprend la liste publiée par l'administration, avec un filtre, des totaux et un export CSV. Elle ne contient ni tarif ni avis : l'administration ne les publie pas dans ces fichiers.</p>
+<p><strong>Source :</strong> <a href="https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees">impots.gouv.fr, « Je consulte la liste des plateformes agréées »</a>, page modifiée le 03/11/2026, lue le 07/11/2026. Les adresses de courriel du fichier d'origine ne sont pas reprises. Vérifiez toujours l'immatriculation sur le site officiel avant de signer : la liste évolue.</p>
+
+<h2 id="les-chiffres-de-la-liste">Les chiffres de la liste</h2>
+<ul id="stats"></ul>
+
+<h2 id="chercher-une-plateforme">Chercher une plateforme</h2>
+<p><label for="q">Nom, ville ou pays</label> <input id="q" type="search" placeholder="ex. Lyon, Belgique, Sage">
+<label for="sel">Afficher</label> <select id="sel"><option value="imm">Immatriculées</option><option value="att">En attente des tests d'interopérabilité</option><option value="tout">Les deux</option></select>
+<label><input type="checkbox" id="fr"> France seulement</label></p>
+<p id="nb" aria-live="polite"></p>
+<div style="overflow-x:auto"><table id="t"><thead><tr><th>Nom commercial</th><th>Ville ou pays</th><th>Site</th><th>Date d'immatriculation</th><th>Statut</th></tr></thead><tbody></tbody></table></div>
+<p><button id="csv" type="button">Télécharger le résultat en CSV</button></p>
+
+<h2 id="ce-que-l-administration-exige-d-une-plateforme">Ce que l'administration exige d'une plateforme</h2>
+<p>D'après la page officielle, un opérateur dépose un dossier qui doit démontrer sa conformité fiscale, la sécurité de ses infrastructures et de ses données, et son interopérabilité technique avec le Portail Public de Facturation et avec les autres plateformes. L'immatriculation définitive n'est accordée qu'après réussite des tests d'interopérabilité en conditions réelles. La page distingue deux listes : les opérateurs qui remplissent toutes les conditions, et ceux qui ont déposé un dossier complet mais attendent l'immatriculation définitive.</p>
+
+<h2 id="ce-que-la-liste-ne-dit-pas">Ce que la liste ne dit pas</h2>
+<ul>
+<li>Le prix, l'offre gratuite éventuelle, la prise en charge des micro-entrepreneurs : non publiés dans ces fichiers. À demander au fournisseur, par écrit.</li>
+<li>Six plateformes de la liste des immatriculées n'ont pas de date d'immatriculation renseignée dans le fichier. Elles sont signalées « date non indiquée ».</li>
+<li>Les noms de fichiers du site officiel ne correspondent pas aux intitulés de la page : le fichier « attente_rapport_audit » contient les opérateurs avec une date d'immatriculation. Nous avons suivi l'ordre et le contenu des fichiers ; en cas de doute, la page officielle fait foi.</li>
+<li>Figurer sur la liste ne dit rien de la qualité du service. Votre logiciel de facturation ou votre expert-comptable propose peut-être déjà une plateforme : demandez-lui d'abord laquelle.</li>
+</ul></article><aside class="aside"><div class="card"><h4>Dans cette page</h4><ul class="toc"><li><a href="#les-chiffres-de-la-liste">Les chiffres de la liste</a></li><li><a href="#chercher-une-plateforme">Chercher une plateforme</a></li><li><a href="#ce-que-l-administration-exige-d-une-plateforme">Ce que l&#x27;administration exige d&#x27;une plateforme</a></li><li><a href="#ce-que-la-liste-ne-dit-pas">Ce que la liste ne dit pas</a></li></ul></div><div class="card related"><h4>À lire aussi</h4><a href="taux-horaire.html">Taux horaire</a><a href="relance-facture.html">Relance et pénalités</a><a href="cout-reunion.html">Coût d&#x27;une réunion</a><a href="mentions-facture.html">Mentions de facture</a><a href="prix-marge.html">Prix et marge</a><a href="devis-batiment.html">Devis du bâtiment</a><a href="plafonds.html">Plafonds et TVA</a><a href="cookies-audience.html">Cookies et statistiques</a><a href="mentions-site.html">Mentions du site</a><a href="facture-electronique.html">Facture électronique</a><a href="registre-rgpd.html">Registre RGPD</a><a href="cgv.html">CGV</a><a href="calendrier-declarations.html">Déclarations Urssaf</a><a href="cfe.html">CFE</a><a href="versement-liberatoire.html">Versement libératoire</a><a href="livre-recettes.html">Livre des recettes</a><a href="frais-kilometriques.html">Frais kilométriques</a><a href="net-micro.html">Ce qu&#x27;il reste</a><a href="classeur-micro.html">Classeur Excel</a><a href="automatiser.html">Quoi automatiser</a><a href="index.html">← Retour à l’accueil</a></div></aside></div></div></main>
+<footer class="foot"><div class="wrap"><div class="g">
+<div><h4>Outils TPE</h4><p>Calculateurs et modèles gratuits en français pour les dirigeants de très petites entreprises, artisans et indépendants.</p><p>Édité par Jarod Capella, Foix (09), France.</p></div>
+<div><h4>Pages</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="taux-horaire.html">Taux horaire</a></li><li><a href="relance-facture.html">Relance et pénalités</a></li><li><a href="cout-reunion.html">Coût d&#x27;une réunion</a></li><li><a href="mentions-facture.html">Mentions de facture</a></li><li><a href="prix-marge.html">Prix et marge</a></li><li><a href="devis-batiment.html">Devis du bâtiment</a></li><li><a href="plafonds.html">Plafonds et TVA</a></li><li><a href="cookies-audience.html">Cookies et statistiques</a></li><li><a href="mentions-site.html">Mentions du site</a></li><li><a href="facture-electronique.html">Facture électronique</a></li><li><a href="plateformes-agreees.html">Plateformes agréées</a></li><li><a href="registre-rgpd.html">Registre RGPD</a></li><li><a href="cgv.html">CGV</a></li><li><a href="calendrier-declarations.html">Déclarations Urssaf</a></li><li><a href="cfe.html">CFE</a></li><li><a href="versement-liberatoire.html">Versement libératoire</a></li><li><a href="livre-recettes.html">Livre des recettes</a></li><li><a href="frais-kilometriques.html">Frais kilométriques</a></li><li><a href="net-micro.html">Ce qu&#x27;il reste</a></li><li><a href="classeur-micro.html">Classeur Excel</a></li><li><a href="automatiser.html">Quoi automatiser</a></li></ul></div>
+<div><h4>Méthode et sources</h4><ul><li><a href="https://entreprendre.service-public.gouv.fr/vosdroits/F37351" rel="noopener">Mentions obligatoires sur le site internet d&#x27;une entreprise (service-public.fr)</a></li><li><a href="https://entreprendre.service-public.gouv.fr/vosdroits/F23211" rel="noopener">Pénalités de retard et délais de paiement (service-public.fr)</a></li><li><a href="https://entreprendre.service-public.gouv.fr/vosdroits/F31808" rel="noopener">Mentions obligatoires sur une facture (service-public.fr)</a></li><li><a href="https://entreprendre.service-public.gouv.fr/vosdroits/F31144" rel="noopener">Devis obligatoire (service-public.fr)</a></li><li><a href="https://entreprendre.service-public.gouv.fr/vosdroits/F23267" rel="noopener">Régime fiscal de la micro-entreprise : plafonds, versement libératoire (service-public.fr)</a></li><li><a href="https://www.service-public.gouv.fr/particuliers/actualites/A14686" rel="noopener">Barème kilométrique 2026 (service-public.gouv.fr)</a></li><li><a href="https://entreprendre.service-public.gouv.fr/vosdroits/F21746" rel="noopener">Franchise en base de TVA (service-public.fr)</a></li><li><a href="https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookies-solutions-pour-les-outils-de-mesure-daudience" rel="noopener">Mesure d&#x27;audience et cookies (cnil.fr)</a></li></ul><p style="margin-top:8px">Les règles juridiques citées sont relevées sur service-public.fr avec leur date de vérification. Les calculs sont indicatifs.</p><h4 style="margin-top:14px">Du même éditeur</h4><ul><li><a href="https://businessiajc.github.io/outil-mail/">Contrôle e-mail</a></li><li><a href="https://businessiajc.github.io/outil-mail/erreurs.html">Erreurs SPF, DKIM, DMARC</a></li><li><a href="https://businessiajc.github.io/outil-mail/generateur-dmarc.html">Générateur DMARC</a></li><li><a href="https://businessiajc.github.io/outil-mail/analyseur-entetes.html">Analyseur d&#x27;en-têtes</a></li><li><a href="https://businessiajc.github.io/fiches-it/">Fiches réseau &amp; cyber</a></li><li><a href="https://businessiajc.github.io/fiches-it/fiche-ports.html">Fiche ports et protocoles</a></li><li><a href="https://businessiajc.github.io/fiches-it/fiche-osi.html">Fiche OSI et TCP/IP</a></li></ul></div>
+</div>
+<div class="legal"><p>Information générale, ni audit de sécurité ni conseil professionnel. Aucun cookie, aucune donnée enregistrée. <a href="mentions.html">Mentions légales</a> · <a href="mailto:businessia.jc@gmail.com">Contact</a> · Mis à jour le 7 novembre 2026.</p></div>
+</div></footer>
+<script>
+(function(){
+var D={"imm":[["@GP","Montélier","26120","https://www.atgp.net/","2025-12-11"],["A-Cube","Italie","20124","https://www.acubeapi.com/","2026-07-21"],["ABBY","Nancy","54000","https://abby.fr/","2026-01-29"],["ACCENTURE","Paris","75013","https://www.accenture.com/fr-fr","2025-12-22"],["ADEMICO SOFTWARE","Belgique","3010","https://ademico-software.com/","2026-01-16"],["AGENA 3000","Cholet","49300","https://www.agena3000.com/fr/nos-solutions/a3-e-facture","2025-12-11"],["AGICAP","Lyon","69009","https://agicap.com/fr/","2026-01-20"],["AGS RECORDS MANAGEMENT","La Chevrolière","44118","https://www.ags-recordsmanagement.com/","2026-07-15"],["Arratech","Suède","111 51","https://www.arratech.com/","2026-07-03"],["ARTEVA","Limonest","69760","https://www.arteva.fr","2025-12-18"],["Aruba S.p.A.","Italie","24036","https://www.arubaonesuite.fr/","2026-07-29"],["AVALARA","Paris","75008","https://www.avalara.com/eu/fr","2025-12-18"],["AXELOR","Champs-sur-Marne","77420","https://axelor.com/fr/","2026-04-13"],["AXONAUT","Balma","31130","https://axonaut.com/","2026-01-08"],["AXWAY SOFTWARE","Paris La Défense Cedex","92035","https://www.axway.com/fr","2026-04-14"],["AZOPIO","Paris","75008","https://www.azopio.com/fr/","2025-12-22"],["B2BRouter","Espagne","08036","https://www.b2brouter.net/fr","2025-12-12"],["B4VALUE.NET","Allemagne","67663","https://www.b4value.net/en/","2026-03-04"],["BASWARE","Finlande","02600","https://www.basware.com/fr","2025-12-18"],["BC SOLUTIONS","Aix-en-Provence","13290","https://bcsolutions.fr/","2026-01-15"],["BE FRESH S.à r.l.","Luxembourg","1896","https://befresh.lu/",""],["BILLIT","Belgique","9000","https://www.billit.eu/fr-be/","2025-12-19"],["BLG","Compiègne","60200","https://www.blgcloud.fr/","2026-08-26"],["CBS Corporate Business Solutions","Allemagne","69115","https://www.cbs-consulting.com/en/","2026-02-25"],["CECURITY","Paris","75009","https://www.cecurity.com","2025-12-18"],["CEGEDIM","Boulogne-Billancourt","92100","https://www.cegedim.fr","2025-12-11"],["CEGI ALFA","Clermont-Ferrand","63000","https://www.cegi.fr/","2026-04-14"],["CEGID","Lyon Cedex 09","69279","https://www.cegid.com/fr","2025-12-18"],["CHAINTRUST by Visma","Paris","75002","https://www.chaintrust.io","2025-12-18"],["CLEARTAX","Paris","75015","https://www.cleartax.com/fr","2026-04-24"],["COMARCH SA","Pologne","/","https://www.comarch.com/","2025-12-18"],["CYCLOPE","Lyon","69006","https://cyclope.digital/","2026-08-25"],["DARVA","Chauray","79180","https://www.darva.com","2025-12-18"],["DEXT","Paris","75009","https://dext.com/fr/produits/logiciel-facturation","2025-12-11"],["DIGIPHARMACIE","Paris","75012","https://digipharmacie.fr/","2025-12-23"],["DIGITAL TECHNOLOGIES","Italie","20122","https://digtechs.com/?lang=fr","2025-12-15"],["Docnova, MELASOFT GmbH","Allemagne","60594","https://www.melasoft.com/","2026-05-13"],["DOCOON","Paris","75002","https://docoon.com","2025-12-15"],["DOCOON IMMO / FREEDZ","Marseille","13008","https://docoon.immo/","2025-12-23"],["DOCUWARE","Paris","75008","https://start.docuware.com/fr/","2025-12-22"],["DOKAPI","Belgique","2800","https://www.dokapi.io/","2026-07-08"],["Dougs Facturation gratuite","Fay-aux-Loges","45450","https://www.dougs.fr/logiciel-facturation-gratuit/","2025-12-12"],["DOXALLIA","Bozouls","12340","https://www.doxallia.com","2025-12-11"],["ecosio InterCom, a Vertex Company","Allemagne","80539","https://ecosio.com/fr/","2026-04-30"],["EDICOM France","Paris","75008","https://edicomgroup.fr","2025-12-11"],["EDICOM Group","Espagne","46980","https://edicomgroup.com","2025-12-11"],["EDICS France","Écully","69130","https://edics.fr/","2026-01-08"],["EdiEyes Vision Care","Angers","49100","https://www.edieyes.fr/","2026-06-01"],["EDT","Montbonnot-Saint-Martin","38330","https://www.group-edt.fr/","2026-01-08"],["EEZI powered by VAT IT","SaintGermain-en-Laye","78100","https://eezi.io/","2026-01-13"],["Effinum by SPEE","Paris","75015","https://www.effinum.fr/","2025-12-11"],["ENERJ","Dardilly","69570","https://www.enerj.fr/","2025-12-18"],["ENTROPICS","Lyon","69002","https://entropics.fr","2026-01-13"],["ESALINK","Bezannes","51430","https://www.esalink.com","2025-12-11"],["ESI","Saint-Priest","69800","https://www.esi-groupe.com/","2026-01-13"],["ESKER","Villeurbanne","69100","https://www.esker.fr","2025-12-11"],["EURO INFORMATION","Strasbourg","67000","https://www.e-i.com/fr","2025-12-22"],["FACNOTE PDP","MARSEILLE","13002","https://www.facnote.com/","2026-01-15"],["FACTUREAPP","Lyon","69002","https://www.factureapp.com/",""],["FIDUCIAL CLOUD","Courbevoie","92400","https://www.fiducial.fr","2026-01-08"],["FISKALTRUST","Lyon","69006","https://fiskaltrust.eu/fr-fr/","2026-08-28"],["FLOWIE","Paris","75001","https://www.get-flowie.com/","2026-01-07"],["Fonoa Technologies Limited","Irlande","D04TR29","https://www.fonoa.com/","2026-04-29"],["FULLL","Lyon","69009","https://www.fulll.fr/","2026-01-15"],["GEP","Espoo (Finlande)","2600","https://www.gep.com/software/e-invoicing","2026-06-17"],["GENERIX Group","Paris La Défense","92050","https://www.generixgroup.com/fr","2025-12-11"],["GESTAV","Saint Quentin","02100","https://gestav.com/","2025-12-19"],["GROUPE SIGMA","La Chapelle-sur-Erdre","44240","https://www.sigma.fr/","2026-01-15"],["GURUSOFT","Espagne","28020","https://guru-soft.com/fr/france/","2026-03-31"],["IAF","Champs-sur-Marne","77420","https://www.assistances.fr/","2026-06-15"],["ICD International","Meudon","92360","https://icdint.fr","2025-12-22"],["iEDI ApS","Danemark","3060","https://www.iedi.com/","2026-02-11"],["IGA ASSURANCE","Malakoff","92240","https://www.iga-assurance.fr/","2026-03-03"],["INDICOM","Italie","20158","https://www.indicom.eu/en/idc-home","2026-01-13"],["INDY","LYON","69006","https://www.indy.fr/","2026-01-09"],["INFOLOGIC","Bourg-lès-Valence","26500","https://www.infologic-copilote.fr/","2026-01-28"],["Insiders Technologies GmbH","Allemagne","67657","https://insiders-technologies.com/en/","2026-11-02"],["In.Te.S.A. spa","Italie","10151","https://www.intesa.it/","2026-08-06"],["INVOPOP","Espagne","28002","https://www.invopop.com/","2026-01-15"],["IOPOLE","Pérols","34470","https://www.iopole.com","2025-12-11"],["iPaidThat","Saint-Grégoire","35760","https://ipaidthat.io/fr","2026-01-06"],["ITESOFT","Aimargues","30470","https://www.itesoft.com/fr","2026-01-15"],["jefacture.com","Paris","75014","https://www.ecma-solutions.com","2025-12-18"],["KALANDA","La Ciotat","13600","https://www.kalanda.net/",""],["KLEKOON","Sevran","93270","https://www.klekoon.com/","2026-01-16"],["KOLECTO PA","Paris","75008","https://www.kolecto.fr","2026-04-22"],["KOLECTO PDP","Paris","75008","https://www.kolecto.fr","2025-12-18"],["Konica Minolta Business Solutions France","Carrières-sur-Seine","78420","https://www.konicaminolta.fr/fr-fr","2026-11-03"],["LE VILLAGE CONNECTE","Fauguerolles","47400","https://village-connecte.fr/","2026-01-08"],["Legalinvoice by Tinexta Infocert","Italie","00196","https://www.infocert.it/","2026-04-13"],["LOGILEC","Le Relecq-Kerhuon","29480","https://www.logilec.fr/","2026-01-06"],["LUCCA","Paris","75013","https://www.lucca.fr","2026-04-24"],["LUNDI MATIN","Montpellier","34000","https://www.lundimatin.fr/","2026-08-24"],["MACOMPTA.FR","Lagord","17140","https://www.macompta.fr/","2026-01-15"],["MAROSA","Espagne","36202","https://marosavat.com/","2026-01-15"],["MEDIUS","Paris","75002","https://www.medius.com/fr","2026-01-08"],["MY-EDDY","Rillieux-la-Pape","69140","https://dailyapps.fr/",""],["MY FITECO","Changé","53810","https://myfiteco.com/","2026-05-12"],["MY UNISOFT","Montigny-le-Bretonneux","78180","https://myunisoft.fr/","2026-04-15"],["MyKinexo PDP","Rennes","35000","https://www.kinexo.fr/","2026-01-15"],["MySupply Aps","Danemark","9400","https://mysupply.dk/en","2026-03-03"],["N2F PDP","Montagnat","01250","https://www.n2f.com/fr/note-de-frais/","2025-12-19"],["NEOTIMO","Amilly","45200","https://neotimo.com/","2026-04-13"],["NTT DATA Business Solutions","Allemagne","02625","https://fr.nttdata.com/","2026-05-13"],["ODOO","Belgique","1367","https://www.odoo.com/fr_FR","2026-04-15"],["OfficeIn","Paris","75001","https://officein.fr/","2026-07-09"],["ONE UP","Paris","75002","https://smallbusiness.oneup.com/fr/","2026-01-08"],["OPEN BEE","Epagny Metz-Tessy","74370","https://www.openbee.com","2026-01-13"],["OPENTEXT","Pays-Bas","2132","https://www.opentext.fr","2025-12-12"],["PAGERO","Suède","411 17","https://www.pagero.com/fr","2025-12-19"],["PARAGON","Marcq-en-Barœul","59700","https://www.paragon.world/fr","2025-12-22"],["PAYFLOWS","Paris","75007","https://payflows.io","2026-04-15"],["PENNYLANE","Paris","75009","https://www.pennylane.com/fr","2025-12-11"],["PITNEY BOWES","Saint-Denis","93210","https://www.pitneybowes.com/fr","2026-01-13"],["Ponsot Conseil Gestion","Aix-en-Provence","13100","https://www.ponsotconseilgestion.com/",""],["QONTO","Paris","75009","https://qonto.com/fr","2025-12-18"],["QWEEBY","Saint-Étienne","42000","https://www.qweeby.fr/","2025-12-22"],["RATIOO","Cappelle-en-Pévèle","59242","https://ratioo.fr","2026-10-09"],["SAGE","La Garenne-Colombes","92250","https://www.sage.com/fr-fr/","2025-12-22"],["SAP","Allemagne","69190","https://www.sap.com/france/","2026-01-15"],["SCRIBEE","Paris","75008","https://www.scribee.tech/","2025-12-22"],["SEEBURGER","Allemagne","75015","https://www.seeburger.com/","2026-01-15"],["SEPTEO","Lattes","34970","https://www.septeopdp.com","2026-01-09"],["SEQINO","Gif-sur-Yvette","91190","https://seqino.com","2026-01-15"],["SERENSIA by Quadient","Paris","75009","https://www.serensia.com/","2025-12-11"],["SERES","Ivry-sur-Seine","94200","https://www.seres.fr","2025-12-11"],["Shine Solutions ApS","Danemark","1171","https://www.shine.fr/","2026-05-21"],["SNI","Slovénie","1000","https://snitechnology.net/fr","2026-04-13"],["SOLO","Suède","111 57","https://www.solo.fr","2026-02-16"],["SOVOS","Portugal","1050","https://www.saphety.com/fr","2025-12-18"],["SPENDESK","Paris","75008","https://www.spendesk.com/fr/","2026-01-15"],["SPS COMMERCE","Pays-Bas","3621","https://tiekinetix.com/fr","2025-12-18"],["SRCI","Chartres","28000","https://solutions.srci.fr/","2026-01-19"],["STORECOVE","Pays-Bas","1211 BT","https://www.storecove.com/fr/fr","2026-04-28"],["SUPER PDP","Paris","75020","https://www.superpdp.tech/","2025-12-22"],["SWILE","Montpellier","34000","https://www.swile.co/","2026-11-02"],["SYMTRAX","Nîmes","30000","https://www.symtrax.com/fr","2025-12-18"],["TAXERA","Paris","75011","https://taxera.tech/","2026-06-04"],["TeamSystem Sellsy","La Rochelle","17000","https://go.sellsy.com/","2025-12-24"],["TENOR","Oullins","69600","https://tenorsolutions.com","2026-01-15"],["TESISQUARE SPA","Italie","12042","https://www.tesisquare.com/fr","2026-01-15"],["TESSI Technologies","Le Haillan","33185","https://www.tessi.eu/fr","2025-12-11"],["TIIME PDP","Paris","75009","https://www.tiime.fr","2025-12-18"],["TRADESHIFT BABELWAY","Belgique","1348","https://tradeshift.com/fr","2026-01-06"],["Transalis Limited","Chypre","1082","https://www.transalis.com/","2026-01-19"],["TRESO2","Paris","75008","http://www.treso2.com","2026-01-08"],["TUNGSTEN AUTOMATION FRANCE","Paris","75008","https://www.tungstenautomation.fr/","2025-12-23"],["TX2 Concept","Olivet","45160","https://tx2.fr","2026-01-14"],["VENTYA","Nanterre","92000","https://www.ventya.fr","2025-12-18"],["VERYSWING","Versailles","78000","https://veryswing.com/","2026-01-15"],["VosFactures","Nice","06200","https://vosfactures.fr/","2026-04-15"],["VOXEL, an Amadeus company","Espagne","8019","https://www.voxelgroup.net/facture-electronique/","2026-01-15"],["WEPROC","Toulon","83000","https://www.weproc.com/fr/","2025-12-23"],["WiseTech GLOBAL","Australie","/","https://www.wisetechglobal.com/fr-fr/","2026-01-15"],["XELYA","Saint-Cloud","92210","https://www.xelya.com/","2026-05-13"],["YOOZ PDP","Aimargues","30470","https://www.getyooz.com/fr","2025-12-11"],["YTEMS","Paris","75015","https://com.ytems.app/","2026-08-03"],["ZEFYR","Paris","75007","https://www.zefyr.net/",""]],"att":[["Basikon","Garches","92380","https://www.basikon.com/fr",""],["CENSE","Marseille","13002","https://www.cpem.fr/o",""],["EAGLESSOFT","Belgique","1930","https://eaglessoft.com/",""],["EY Expertises & Transactions","Courbevoie","92400","https://www.ey.com/fr_fr",""],["Sage Holding France","Puteaux","92800","https://www.sage.com/fr-fr/",""],["Taxilla Europe BV","Belgique","1000","https://www.taxilla.com/",""],["YUMAN","Belgique","1000","https://www.yuman.io/",""]]};
+var PAYS=['belgique','italie','allemagne','espagne','royaume-uni','suisse','luxembourg','pays-bas','irlande','danemark','suède','pologne','finlande','portugal','autriche','norvège','états-unis','canada','inde','roumanie','tchéquie','slovaquie','hongrie','grèce','lituanie','lettonie','estonie','malte','chypre','bulgarie','croatie','slovénie'];
+function isFr(x){return /^\d{5}$/.test(x[2])&&PAYS.indexOf(x[1].toLowerCase().trim())<0&&x[1].indexOf('(')<0}
+var rows=D.imm.map(function(x){return x.concat(['Immatriculée'])}).concat(D.att.map(function(x){return x.concat(['En attente'])}));
+function norm(s){return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')}
+var imm=D.imm,nFr=imm.filter(isFr).length,mois={};
+imm.forEach(function(x){if(x[4]){var m=x[4].slice(0,7);mois[m]=(mois[m]||0)+1}});
+var dates=imm.map(function(x){return x[4]}).filter(Boolean).sort();
+var sans=imm.length-dates.length;
+var ks=Object.keys(mois),top=ks.sort(function(a,b){return mois[b]-mois[a]})[0];
+var st=document.getElementById('stats');
+function li(t){var e=document.createElement('li');e.textContent=t;st.appendChild(e)}
+li(imm.length+' plateformes immatriculées dans le fichier, dont '+nFr+' avec un code postal français et '+(imm.length-nFr)+' avec une adresse à l\'étranger ou non standard.');
+li(D.att.length+' opérateurs avec un dossier complet, en attente des tests d\'interopérabilité.');
+li(dates.length+' immatriculations datées, du '+dates[0]+' au '+dates[dates.length-1]+'. Mois le plus chargé : '+top+' ('+mois[top]+'). '+sans+' sans date.');
+var tb=document.querySelector('#t tbody'),nb=document.getElementById('nb'),cur=[];
+function render(){
+ var q=norm(document.getElementById('q').value.trim()),s=document.getElementById('sel').value,f=document.getElementById('fr').checked;
+ cur=rows.filter(function(x){
+  if(s==='imm'&&x[5]!=='Immatriculée')return false;
+  if(s==='att'&&x[5]!=='En attente')return false;
+  if(f&&!isFr(x))return false;
+  return !q||norm(x[0]+' '+x[1]).indexOf(q)>=0});
+ tb.textContent='';
+ cur.forEach(function(x){var tr=document.createElement('tr');
+  [x[0],x[1]].forEach(function(v){var td=document.createElement('td');td.textContent=v;tr.appendChild(td)});
+  var td=document.createElement('td');
+  if(/^https?:\/\//.test(x[3])){var a=document.createElement('a');a.href=x[3];a.rel='noopener nofollow';a.textContent=x[3].replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,'');td.appendChild(a)}
+  tr.appendChild(td);
+  var d=document.createElement('td');d.textContent=x[5]==='Immatriculée'?(x[4]||'date non indiquée'):'';tr.appendChild(d);
+  var e=document.createElement('td');e.textContent=x[5];tr.appendChild(e);tb.appendChild(tr)});
+ nb.textContent=cur.length+' résultat'+(cur.length>1?'s':'')+'.';}
+['q','sel','fr'].forEach(function(i){document.getElementById(i).addEventListener('input',render)});
+document.getElementById('csv').addEventListener('click',function(){
+ function c(v){v=String(v);return /[";\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v}
+ var out='﻿Nom;Ville ou pays;Code postal;Site;Date;Statut\n'+cur.map(function(x){return [x[0],x[1],x[2],x[3],x[4],x[5]].map(c).join(';')}).join('\n');
+ var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([out],{type:'text/csv;charset=utf-8'}));a.download='plateformes-agreees.csv';a.click()});
+render();
+})();
+</script><script>
+(function(){var l=[].slice.call(document.querySelectorAll('.aside .toc a'));if(!l.length||!('IntersectionObserver' in window))return;
+var m={};l.forEach(function(a){m[a.getAttribute('href').slice(1)]=a});
+var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){l.forEach(function(a){a.classList.remove('on')});var a=m[e.target.id];if(a)a.classList.add('on')}})},{rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('.prose h2[id]').forEach(function(h){o.observe(h)})})();
+</script>
+</body>
+</html>
