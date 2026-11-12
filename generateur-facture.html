@@ -399,7 +399,7 @@ function rendu(s,L,c){
  row(s.fr?"Total à payer":"Total TTC",eur(c.ttc),true);
  var p=el("p",null,null);p.style.margin="12px 0 0";
  var lignes=[];
- if(s.fr)lignes.push("TVA non applicable, art. 293 B du CGI.");
+ if(s.fr)lignes.push("TVA non applicable, art. L. 223 et s. du CIBS.");
  if(s.date)lignes.push("Date d'échéance : "+addDays(s.date,s.delai)+" ("+s.delai+" jours).");
  lignes.push("Escompte pour paiement anticipé : néant.");
  if(s.pro){lignes.push("Pénalités de retard : "+s.pen.toFixed(2).replace(".",",")+" % par an, exigibles sans rappel après la date d'échéance.");lignes.push("Indemnité forfaitaire pour frais de recouvrement en cas de retard : 40 €.")}
