@@ -15,7 +15,7 @@
 <meta property="og:description" content="Enter the amount, the due date and the payment date: get the statutory late payment interest between businesses in France, Germany, Spain or Italy, split by half-year rate, plus the 40 euro fixed sum. Rates taken from the ECB, the Bundesbank and the national laws, read on 9 November 2026.">
 <meta property="og:url" content="https://businessiajc.github.io/outils-tpe/en-late-payment-interest.html">
 <meta name="twitter:card" content="summary">
-<link rel="alternate" hreflang="en" href="https://businessiajc.github.io/outils-tpe/en-late-payment-interest.html"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Late payment interest between businesses: France, Germany, Spain and Italy","description":"Enter the amount, the due date and the payment date: get the statutory late payment interest between businesses in France, Germany, Spain or Italy, split by half-year rate, plus the 40 euro fixed sum. Rates taken from the ECB, the Bundesbank and the national laws, read on 9 November 2026.","inLanguage":"en","dateModified":"2026-11-09","author":{"@type":"Person","name":"Jarod Capella"},"mainEntityOfPage":"https://businessiajc.github.io/outils-tpe/en-late-payment-interest.html"}</script>
+<link rel="alternate" hreflang="en" href="https://businessiajc.github.io/outils-tpe/en-late-payment-interest.html"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Late payment interest between businesses: France, Germany, Spain and Italy","description":"Enter the amount, the due date and the payment date: get the statutory late payment interest between businesses in France, Germany, Spain or Italy, split by half-year rate, plus the 40 euro fixed sum. Rates taken from the ECB, the Bundesbank and the national laws, read on 9 November 2026.","inLanguage":"en","dateModified":"2026-11-14","author":{"@type":"Person","name":"Jarod Capella"},"mainEntityOfPage":"https://businessiajc.github.io/outils-tpe/en-late-payment-interest.html"}</script>
 <style>
 /* Système de design commun — éditorial, sobre, lisible. Une seule couleur d'accent. */
 :root{
@@ -46,15 +46,17 @@ a:hover{text-decoration-thickness:2px}
 /* En-tête */
 .top{background:var(--surface);border-bottom:1px solid var(--line);border-top:4px solid var(--ac);position:sticky;top:0;z-index:5}
 .top .wrap{display:flex;align-items:center;gap:20px;min-height:58px;padding-top:6px;padding-bottom:6px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em;color:var(--ink);text-decoration:none;font-size:1.02rem}
+.brand{flex:none;white-space:nowrap;display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em;color:var(--ink);text-decoration:none;font-size:1.02rem}
 .brand svg{flex:none}
 .brand small{font-weight:500;color:var(--mut);margin-left:2px}
-.nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+.nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap;align-items:center;min-width:0}
+.dd{position:relative}.dd>button{font:inherit;font-size:.93rem;font-weight:500;color:var(--ink-2);background:none;border:0;border-radius:7px;padding:7px 11px;cursor:pointer;white-space:nowrap}.dd>button::after{content:"";display:inline-block;margin-left:7px;width:6px;height:6px;border-right:1.6px solid currentColor;border-bottom:1.6px solid currentColor;transform:translateY(-2px) rotate(45deg)}.dd>button:hover,.dd.open>button{background:var(--surface-2);color:var(--ink)}.dd>button[aria-current]{background:var(--ac-soft);color:var(--ac)}
+.menu{display:none;position:absolute;top:100%;left:0;min-width:250px;background:var(--surface);border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.18);padding:6px;z-index:20;flex-direction:column;gap:1px}.dd.open>.menu{display:flex}@media(hover:hover){.dd:hover>.menu{display:flex}}.menu a{display:block;padding:8px 12px}
 .nav a{white-space:nowrap;color:var(--ink-2);text-decoration:none;padding:7px 11px;border-radius:7px;font-size:.93rem;font-weight:500}
 .nav a:hover{background:var(--surface-2);color:var(--ink)}
 .nav a[aria-current=page]{background:var(--ac-soft);color:var(--ac)}
-@media(max-width:1020px){.top .wrap{flex-wrap:wrap;gap:2px 20px;padding-top:10px;padding-bottom:8px}.nav{margin-left:0;width:100%}}
-@media(max-width:720px){.top .wrap{gap:4px}.brand small{display:none}.nav{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}.nav::-webkit-scrollbar{display:none}.nav a{flex:none}}
+@media(max-width:1020px){.top .wrap{flex-wrap:wrap;gap:2px 20px;padding-top:10px;padding-bottom:8px}.nav{margin-left:0;width:100%}.menu{min-width:230px}}
+@media(max-width:720px){.top .wrap{gap:4px}.brand small{display:none}.nav{padding-bottom:2px}.dd{position:static}.menu{position:absolute;left:16px;right:16px;min-width:0}}
 
 /* Bandeau d'accueil */
 .hero{padding:56px 0 44px;border-bottom:1px solid var(--line);background:var(--hero);position:relative}
@@ -212,7 +214,7 @@ a.tag:hover{filter:brightness(.95);text-decoration:none}
 <body>
 <a class="skip" href="#contenu">Skip to content</a>
 <header class="top"><div class="wrap"><a class="brand" href="en-late-payment-interest.html"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#0b5d56"/><rect x="7" y="6" width="14" height="16" rx="2" fill="none" stroke="#fff" stroke-width="1.6"/><rect x="9.5" y="8.5" width="9" height="3.5" rx=".8" fill="#fff"/><g fill="#fff"><circle cx="10.6" cy="15.4" r="1"/><circle cx="14" cy="15.4" r="1"/><circle cx="17.4" cy="15.4" r="1"/><circle cx="10.6" cy="18.6" r="1"/><circle cx="14" cy="18.6" r="1"/><circle cx="17.4" cy="18.6" r="1"/></g></svg><span>Outils TPE</span><small>Free tools for small businesses</small></a><nav class="nav" aria-label="Language"></nav></div></header>
-<main id="contenu" class="page"><div class="wrap"><div class="layout" style="display:block"><article class="prose"><h1>Late payment interest between businesses: France, Germany, Spain and Italy</h1><p class="byline">By Jarod Capella · Updated November 9, 2026 · 3 min read</p>
+<main id="contenu" class="page"><div class="wrap"><div class="layout" style="display:block"><article class="prose"><h1>Late payment interest between businesses: France, Germany, Spain and Italy</h1><p class="byline">By Jarod Capella · Updated November 14, 2026 · 3 min read</p>
 
 <p>An invoice of 5,000 euros paid 61 days late by a German company carries 87.91 euros of statutory interest, plus a fixed 40 euros. The same delay costs 103.62 euros in France, where the margin is 10 points instead of 9. The four countries all start from an ECB or central bank rate, but they add different margins and pick the rate on different dates. This calculator applies each country's rule half-year by half-year.</p>
 
@@ -265,7 +267,7 @@ a.tag:hover{filter:brightness(.95);text-decoration:none}
 <li>Italy: <a href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2002-10-09;231" rel="noopener">D.Lgs. 231/2002 (Normattiva)</a></li>
 </ul>
 <p>Also on this site: <a href="en-e-invoicing-europe.html">e-invoicing deadlines in six EU countries</a>.</p></article></div></div></main>
-<footer class="foot"><div class="wrap"><div class="g"><div><h4>Outils TPE</h4><p>Free calculators and checklists for small business owners and freelancers. Every legal rule cites the official page it comes from. The French site has more tools.</p><p>Published by Jarod Capella, France.</p></div><div><h4>Sources</h4><ul><li><a href="https://www.impots.gouv.fr/professionnel/questions/partir-de-quand-suis-je-concerne-par-la-reforme-de-la-facturation" rel="noopener">France: impots.gouv.fr</a></li><li><a href="https://einvoice.belgium.be/en/article/when-e-invoicing-mandatory" rel="noopener">Belgium: einvoice.belgium.be</a></li><li><a href="https://www.gesetze-im-internet.de/ustg_1980/__27.html" rel="noopener">Germany: § 27 (38) UStG</a></li></ul></div></div><div class="legal"><p>General information, not legal or tax advice. No cookies, no data stored: everything runs in your browser. <a href="mentions.html">Legal notice (French)</a> · <a href="mailto:businessia.jc@gmail.com">Contact</a> · Updated November 9, 2026.</p></div></div></footer>
+<footer class="foot"><div class="wrap"><div class="g"><div><h4>Outils TPE</h4><p>Free calculators and checklists for small business owners and freelancers. Every legal rule cites the official page it comes from. The French site has more tools.</p><p>Published by Jarod Capella, France.</p></div><div><h4>Sources</h4><ul><li><a href="https://www.impots.gouv.fr/professionnel/questions/partir-de-quand-suis-je-concerne-par-la-reforme-de-la-facturation" rel="noopener">France: impots.gouv.fr</a></li><li><a href="https://einvoice.belgium.be/en/article/when-e-invoicing-mandatory" rel="noopener">Belgium: einvoice.belgium.be</a></li><li><a href="https://www.gesetze-im-internet.de/ustg_1980/__27.html" rel="noopener">Germany: § 27 (38) UStG</a></li></ul></div></div><div class="legal"><p>General information, not legal or tax advice. No cookies, no data stored: everything runs in your browser. <a href="mentions.html">Legal notice (French)</a> · <a href="mailto:businessia.jc@gmail.com">Contact</a> · Updated November 14, 2026.</p></div></div></footer>
 <script>
 (function(){
 var R={FR:[12.15,12.15,12.40],DE:[10.27,10.27,10.52],ES:[10.15,10.15,10.40],IT:[10.15,10.15,10.40]};
