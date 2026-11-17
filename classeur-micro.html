@@ -289,6 +289,12 @@ d.addEventListener('click',function(e){var b=e.target.closest('.dd>button');if(b
 d.addEventListener('keydown',function(e){if(e.key==='Escape')close()})})();</script>
 <script>(function(){var d=document;function close(e){d.querySelectorAll('.dd.open').forEach(function(x){if(!e||!x.contains(e.target)){x.classList.remove('open');x.firstElementChild.setAttribute('aria-expanded','false')}})}
 d.addEventListener('click',function(e){var b=e.target.closest('.dd>button');if(b){var p=b.parentNode,o=p.classList.contains('open');close();if(!o){p.classList.add('open');b.setAttribute('aria-expanded','true')}e.preventDefault();return}close(e)});
+d.addEventListener('keydown',function(e){if(e.key==='Escape')close()})})();</script>
+<script>(function(){var d=document;function close(e){d.querySelectorAll('.dd.open').forEach(function(x){if(!e||!x.contains(e.target)){x.classList.remove('open');x.firstElementChild.setAttribute('aria-expanded','false')}})}
+d.addEventListener('click',function(e){var b=e.target.closest('.dd>button');if(b){var p=b.parentNode,o=p.classList.contains('open');close();if(!o){p.classList.add('open');b.setAttribute('aria-expanded','true')}e.preventDefault();return}close(e)});
+d.addEventListener('keydown',function(e){if(e.key==='Escape')close()})})();</script>
+<script>(function(){var d=document;function close(e){d.querySelectorAll('.dd.open').forEach(function(x){if(!e||!x.contains(e.target)){x.classList.remove('open');x.firstElementChild.setAttribute('aria-expanded','false')}})}
+d.addEventListener('click',function(e){var b=e.target.closest('.dd>button');if(b){var p=b.parentNode,o=p.classList.contains('open');close();if(!o){p.classList.add('open');b.setAttribute('aria-expanded','true')}e.preventDefault();return}close(e)});
 d.addEventListener('keydown',function(e){if(e.key==='Escape')close()})})();</script><script>
 (function(){var l=[].slice.call(document.querySelectorAll('.aside .toc a'));if(!l.length||!('IntersectionObserver' in window))return;
 var m={};l.forEach(function(a){m[a.getAttribute('href').slice(1)]=a});
