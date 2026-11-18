@@ -1,0 +1,103 @@
+{
+ "titre": "Baromètre accessibilité, pages d'accueil de sites marchands français",
+ "date_mesure": "2026-11-17",
+ "moteur": "axe-core 4.11.1, tags wcag2a wcag2aa wcag21a wcag21aa, erreurs seulement",
+ "source_echantillon": "Wikidata (CC0) : commerçants en ligne, pays France, site officiel renseigné",
+ "sites_listes": 162,
+ "ecartes": {
+  "blocage_ou_injoignable": 22,
+  "page_en_anglais": 12,
+  "acces_restreint": 1
+ },
+ "pages_analysees": 127,
+ "au_moins_une_erreur": 116,
+ "au_moins_une_critique": 55,
+ "aucune_erreur": 11,
+ "mediane_types_erreur": 2,
+ "mediane_elements": 16,
+ "max_elements": 172,
+ "lien_accessibilite_accueil": 20,
+ "lien_accessibilite_detail": {
+  "affiche_non_conforme": 7,
+  "affiche_partiellement_conforme": 2,
+  "critique_avec_lien": "9/20",
+  "critique_sans_lien": "46/107"
+ },
+ "regles": [
+  {
+   "regle_axe": "color-contrast",
+   "pages": 94,
+   "part_pct": 74
+  },
+  {
+   "regle_axe": "link-name",
+   "pages": 59,
+   "part_pct": 46
+  },
+  {
+   "regle_axe": "image-alt",
+   "pages": 27,
+   "part_pct": 21
+  },
+  {
+   "regle_axe": "list",
+   "pages": 24,
+   "part_pct": 19
+  },
+  {
+   "regle_axe": "button-name",
+   "pages": 20,
+   "part_pct": 16
+  },
+  {
+   "regle_axe": "meta-viewport",
+   "pages": 20,
+   "part_pct": 16
+  },
+  {
+   "regle_axe": "frame-title",
+   "pages": 13,
+   "part_pct": 10
+  },
+  {
+   "regle_axe": "listitem",
+   "pages": 11,
+   "part_pct": 9
+  },
+  {
+   "regle_axe": "link-in-text-block",
+   "pages": 10,
+   "part_pct": 8
+  },
+  {
+   "regle_axe": "label",
+   "pages": 10,
+   "part_pct": 8
+  },
+  {
+   "regle_axe": "scrollable-region-focusable",
+   "pages": 10,
+   "part_pct": 8
+  },
+  {
+   "regle_axe": "select-name",
+   "pages": 8,
+   "part_pct": 6
+  },
+  {
+   "regle_axe": "aria-prohibited-attr",
+   "pages": 7,
+   "part_pct": 6
+  },
+  {
+   "regle_axe": "nested-interactive",
+   "pages": 7,
+   "part_pct": 6
+  },
+  {
+   "regle_axe": "aria-hidden-focus",
+   "pages": 7,
+   "part_pct": 6
+  }
+ ]
+}
